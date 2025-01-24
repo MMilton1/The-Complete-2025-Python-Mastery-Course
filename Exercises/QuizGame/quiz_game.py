@@ -19,6 +19,26 @@ quiz = [
         "options": ["A. Atlantic", "B. Indian", "C. Artic", "D. Pacific"],
         "answer": "D",
     },
+    {
+        "question": " Who wrote the play 'Romeo and Juliet'?",
+        "options": [
+            "A. William Shakespeare",
+            "B. Charles Dickens",
+            "C. Mark Twain",
+            "D. Jane Austen",
+        ],
+        "answer": "A",
+    },
+    {
+        "question": " What is the chemical symbol for water?",
+        "options": ["A. O2", "B. CO2", "C. H2O", "D. NaCl"],
+        "answer": "C",
+    },
+    {
+        "question": " How many continents are there on Earth?",
+        "options": ["A. Five", "B. Six", "C. Seven", "D. Eight"],
+        "answer": "C",
+    },
 ]
 
 random.shuffle(quiz)
