@@ -1,4 +1,6 @@
 import random
+from termcolor import cprint
+
 
 score_count = 0
 quiz = [
@@ -25,39 +27,13 @@ for index, item in enumerate(quiz, 1):
     for option in item["options"]:
         print(option)
 
-    input("Your answer: ")
+    answer = input("Your answer: ").upper().strip()
 
-# question1 = input(
-#     """Question 1: What is the capital of France?
-# A. Berlin\nB. Madrid\nC. Paris\nD. Rome\nYour answer: """
-# ).upper()
+    if answer == item["answer"]:
+        score_count += 1
+        cprint("Correct!", "green")
+    else:
+        cprint(f"Wrong! The correct answer is {item['answer']}", "red")
 
-# if question1 == "C":
-#     score_count += 1
-#     print("Correct!")
-# else:
-#     print("Wrong! The correct answer is C")
 
-# question2 = input(
-#     """Question 2: What planet is known as the red planet?
-# A. Earth\nB. Mars\nC. Jupiter\nD. Saturn\nYour answer: """
-# ).upper()
-
-# if question2 == "B":
-#     score_count += 1
-#     print("Correct!")
-# else:
-#     print("Wrong! The correct answer is B")
-
-# question3 = input(
-#     """Question 2: What is the largest ocean on Earth?
-# A. Atlantic\nB. Indian\nC. Arctic\nD. Pacific\nYour answer: """
-# ).upper()
-
-# if question3 == "D":
-#     score_count += 1
-#     print("Correct!")
-# else:
-#     print("Wrong! The correct answer is D")
-
-# print(f"Quiz over! Your final score is {score_count} out of 3")
+print(f"Quiz over! Your final score is {score_count} out of {len(quiz)}")
