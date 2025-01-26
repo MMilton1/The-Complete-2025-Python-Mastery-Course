@@ -71,5 +71,6 @@ def main():
     ]
     run_quiz(quiz)
 
-    # if __name__ == "main":
-    #     main()
+
+if __name__ == "main":
+    main()
